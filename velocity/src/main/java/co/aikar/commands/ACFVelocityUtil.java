@@ -21,6 +21,7 @@ public class ACFVelocityUtil {
 
     public static Player findPlayerSmart(ProxyServer server, CommandIssuer issuer, String search) {
         String name = ACFUtil.replace(search, ":confirm", "");
+        name = ACFUtil.replace(name, ":confirmar", "");
 
         List<Player> matches = new ArrayList<>(matchPlayer(server, name));
 

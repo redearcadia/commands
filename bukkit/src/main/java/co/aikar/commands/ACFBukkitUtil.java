@@ -269,6 +269,7 @@ public class ACFBukkitUtil {
             return null;
         }
         String name = ACFUtil.replace(search, ":confirm", "");
+        name = ACFUtil.replace(name, ":confirmar", "");
         List<Player> matches = Bukkit.getServer().matchPlayer(name);
         List<Player> confirmList = new ArrayList<>();
         findMatches(search, requester, matches, confirmList);
@@ -308,7 +309,7 @@ public class ACFBukkitUtil {
             Player player = iter.next();
             if (requester instanceof Player && !((Player) requester).canSee(player)) {
                 if (requester.hasPermission("acf.seevanish")) {
-                    if (!search.endsWith(":confirm")) {
+                    if (!search.endsWith(":confirm") && !search.endsWith(":confirmar")) {
                         confirmList.add(player);
                         iter.remove();
                     }

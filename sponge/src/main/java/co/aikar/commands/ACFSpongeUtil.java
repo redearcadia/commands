@@ -18,6 +18,7 @@ public class ACFSpongeUtil {
             return null;
         }
         String name = ACFUtil.replace(search, ":confirm", "");
+        name = ACFUtil.replace(name, ":confirmar", "");
 
         List<Player> matches = matchPlayer(name);
         List<Player> confirmList = new ArrayList<>();
@@ -58,7 +59,7 @@ public class ACFSpongeUtil {
             Player player = iter.next();
             if (requester instanceof Player && !((Player) requester).canSee(player)) {
                 if (requester.hasPermission("acf.seevanish")) {
-                    if (!search.endsWith(":confirm")) {
+                    if (!search.endsWith(":confirm") && !search.endsWith(":confirmar")) {
                         confirmList.add(player);
                         iter.remove();
                     }

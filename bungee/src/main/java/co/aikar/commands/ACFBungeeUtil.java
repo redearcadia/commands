@@ -114,6 +114,7 @@ public class ACFBungeeUtil {
     public static ProxiedPlayer findPlayerSmart(CommandIssuer issuer, String search) {
         CommandSender requester = issuer.getIssuer();
         String name = ACFUtil.replace(search, ":confirm", "");
+        name = ACFUtil.replace(name, ":confirmar", "");
 
         List<ProxiedPlayer> matches = new ArrayList<>(ProxyServer.getInstance().matchPlayer(name));
 
