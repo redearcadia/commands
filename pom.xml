@@ -39,12 +39,12 @@
 
     <distributionManagement>
         <repository>
-            <id>aikar</id>
-            <url>https://repo.aikar.co/content/repositories/aikar-release/</url>
+            <id>repsy</id>
+            <url>https://repo.repsy.io/mvn/witchboo/default</url>
         </repository>
         <snapshotRepository>
-            <id>aikar</id>
-            <url>https://repo.aikar.co/content/repositories/aikar-snapshots/</url>
+            <id>repsy</id>
+            <url>https://repo.repsy.io/mvn/witchboo/default</url>
         </snapshotRepository>
     </distributionManagement>
 
