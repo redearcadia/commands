@@ -67,7 +67,7 @@ public class SpongeCommandManager extends CommandManager<
         this.formatters.put(MessageType.ERROR, defaultFormatter = new SpongeMessageFormatter(TextColors.RED, TextColors.YELLOW, TextColors.RED));
         this.formatters.put(MessageType.SYNTAX, new SpongeMessageFormatter(TextColors.YELLOW, TextColors.GREEN, TextColors.WHITE));
         this.formatters.put(MessageType.INFO, new SpongeMessageFormatter(TextColors.BLUE, TextColors.DARK_GREEN, TextColors.GREEN));
-        this.formatters.put(MessageType.HELP, new SpongeMessageFormatter(TextColors.AQUA, TextColors.GREEN, TextColors.YELLOW));
+        this.formatters.put(MessageType.HELP, new SpongeMessageFormatter(TextColors.WHITE, TextColors.GRAY, TextColors.DARK_GRAY, TextColors.RED));
         getLocales(); // auto load locales
 
         this.validNamePredicate = ACFSpongeUtil::isValidName;
