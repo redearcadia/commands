@@ -59,10 +59,10 @@ public class BungeeCommandManager extends CommandManager<
 
     public BungeeCommandManager(Plugin plugin) {
         this.plugin = plugin;
-        this.formatters.put(MessageType.ERROR, defaultFormatter = new BungeeMessageFormatter(ChatColor.RED, ChatColor.YELLOW, ChatColor.RED));
-        this.formatters.put(MessageType.SYNTAX, new BungeeMessageFormatter(ChatColor.YELLOW, ChatColor.GREEN, ChatColor.WHITE));
-        this.formatters.put(MessageType.INFO, new BungeeMessageFormatter(ChatColor.BLUE, ChatColor.DARK_GREEN, ChatColor.GREEN));
-        this.formatters.put(MessageType.HELP, new BungeeMessageFormatter(ChatColor.WHITE, ChatColor.GRAY, ChatColor.DARK_GRAY, ChatColor.RED));
+        this.formatters.put(MessageType.ERROR, defaultFormatter = new BungeeMessageFormatter(ChatColor.RED));
+        this.formatters.put(MessageType.SYNTAX, new BungeeMessageFormatter(ChatColor.RED));
+        this.formatters.put(MessageType.INFO, new BungeeMessageFormatter(ChatColor.GRAY));
+        this.formatters.put(MessageType.HELP, new BungeeMessageFormatter(ChatColor.AQUA, ChatColor.WHITE, ChatColor.DARK_GRAY, ChatColor.GRAY, ChatColor.RED));
 
         getLocales(); // auto load locales
 

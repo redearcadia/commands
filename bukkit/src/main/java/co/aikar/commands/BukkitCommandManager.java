@@ -104,10 +104,10 @@ public class BukkitCommandManager extends CommandManager<
         this.logger = Logger.getLogger(prefix != null ? prefix : this.plugin.getName());
         this.timingManager = TimingManager.of(plugin);
         this.commandMap = hookCommandMap();
-        this.formatters.put(MessageType.ERROR, defaultFormatter = new BukkitMessageFormatter(ChatColor.RED, ChatColor.YELLOW, ChatColor.RED));
-        this.formatters.put(MessageType.SYNTAX, new BukkitMessageFormatter(ChatColor.YELLOW, ChatColor.GREEN, ChatColor.WHITE));
-        this.formatters.put(MessageType.INFO, new BukkitMessageFormatter(ChatColor.BLUE, ChatColor.DARK_GREEN, ChatColor.GREEN));
-        this.formatters.put(MessageType.HELP, new BukkitMessageFormatter(ChatColor.WHITE, ChatColor.GRAY, ChatColor.DARK_GRAY, ChatColor.RED));
+        this.formatters.put(MessageType.ERROR, defaultFormatter = new BukkitMessageFormatter(ChatColor.RED));
+        this.formatters.put(MessageType.SYNTAX, new BukkitMessageFormatter(ChatColor.RED));
+        this.formatters.put(MessageType.INFO, new BukkitMessageFormatter(ChatColor.GRAY));
+        this.formatters.put(MessageType.HELP, new BukkitMessageFormatter(ChatColor.AQUA, ChatColor.WHITE, ChatColor.DARK_GRAY, ChatColor.GRAY, ChatColor.RED));
         Pattern versionPattern = Pattern.compile("\\(MC: (\\d)\\.(\\d+)\\.?(\\d+?)?\\)");
         Matcher matcher = versionPattern.matcher(Bukkit.getVersion());
         if (matcher.find()) {
