@@ -39,12 +39,12 @@
 
     <distributionManagement>
         <repository>
-            <id>repsy</id>
-            <url>https://repo.repsy.io/mvn/witchboo/default</url>
+            <id>vouncherstudios-repository-releases</id>
+            <url>https://repo.vouncherstudios.com/releases</url>
         </repository>
         <snapshotRepository>
-            <id>repsy</id>
-            <url>https://repo.repsy.io/mvn/witchboo/default</url>
+            <id>vouncherstudios-repository-snapshots</id>
+            <url>https://repo.vouncherstudios.com/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 
